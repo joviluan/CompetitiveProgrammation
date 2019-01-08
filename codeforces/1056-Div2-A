@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+int cnt[102];
+
+int main() {
+    int n,m,o;
+    cout << "Numero de paradas:";cin >> n;
+    for (int i=0;i<n;++i){
+        cout << "Parada " << i+1 << " :" ;
+        cout << "Numero de trenes en la parada:";cin >> m;
+        for (int k=0;k<m;++k){
+            cin >> o;
+            cnt[o]++;
+        }
+    }
+    for (int p=0; p < 102;++p){
+        cout << "Posibles trenes:\n";
+        if (cnt[p]==n){
+            cout << p << " ";
+        }
+    }
+
+ return 0;
+}
